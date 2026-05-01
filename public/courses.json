@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript Mastery Course",
+    "instructor": "Michael Smith",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master JavaScript from basics to advanced concepts.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "React JS Complete Guide",
+    "instructor": "Sarah Johnson",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Build modern web apps using React JS.",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
+    "category": "Development"
+  },
+  {
+    "id": 4,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Emily Davis",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn the basics of UI/UX design principles.",
+    "image": "https://images.unsplash.com/photo-1586717799252-bd134ad00e26",
+    "category": "Design"
+  },
+  {
+    "id": 5,
+    "title": "Python for Beginners",
+    "instructor": "David Wilson",
+    "duration": "16 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Start programming with Python easily.",
+    "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935",
+    "category": "Programming"
+  },
+  {
+    "id": 6,
+    "title": "Digital Marketing Masterclass",
+    "instructor": "Sophia Brown",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn SEO, social media marketing, and ads.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    "category": "Marketing"
+  },
+  {
+    "id": 7,
+    "title": "Node.js Backend Development",
+    "instructor": "Chris Martin",
+    "duration": "14 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Build scalable backend apps using Node.js.",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "category": "Development"
+  },
+  {
+    "id": 8,
+    "title": "Graphic Design with Photoshop",
+    "instructor": "Olivia Taylor",
+    "duration": "11 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Create stunning designs using Photoshop.",
+    "image": "https://images.unsplash.com/photo-1504691342899-4d92b50853e1",
+    "category": "Design"
+  }
+]
