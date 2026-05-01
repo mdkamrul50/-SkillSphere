@@ -21,7 +21,7 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 const Banner = () => {
   return (
     <div className='bg-blue-100'>
-      <div className="container mx-auto  flex ">
+      <div className="container mx-auto pl-6  flex ">
         <div className="pt-10">
           <span className=" font-semibold text-blue-500 flex items-center gap-3 bg-blue-200 px-3 py-1 rounded-full max-w-60 mb-8">
             <FaGraduationCap /> Online Learning Platform
@@ -96,7 +96,7 @@ const Banner = () => {
             <div className="max-w-6xl mx-auto px-4 flex justify-center items-center relative">
               <div className="absolute w-102.5 h-112.5 bg-blue-500 rounded-full opacity-70 blur-2xl"></div>
 
-              {/* Image */}
+              
               <div className="relative z-10">
                 <Image
                   src={BannerImage}
@@ -107,7 +107,7 @@ const Banner = () => {
                 />
               </div>
 
-              {/* Left Card */}
+          
               <div className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-xl p-4 items-center gap-3 z-20">
                 <div className="bg-green-100 p-3 rounded-full">
                   <FaChartBar className="text-green-500" />
@@ -120,7 +120,7 @@ const Banner = () => {
                 </div>
               </div>
 
-              {/* Top Right Card */}
+           
               <div className="hidden md:flex absolute right-0 top-10 bg-white shadow-md rounded-xl p-4 items-center gap-3 z-20">
                 <div className="bg-blue-100 p-3 rounded-full">
                   <FaPlay className="text-blue-500" />
@@ -133,7 +133,7 @@ const Banner = () => {
                 </div>
               </div>
 
-              {/* Bottom Right Card */}
+              
               <div className="hidden md:flex absolute right-0 bottom-10 bg-white shadow-md rounded-xl p-4 items-center gap-3 z-20">
                 <div className="bg-yellow-100 p-3 rounded-full">
                   <FaFileAlt className="text-yellow-500" />
@@ -149,11 +149,11 @@ const Banner = () => {
           </section>
         </div>
       </div>
-      <section className=" absolute bottom-45 left-50 container mx-auto z-20 ">
+      <section className=" absolute bottom-45 left-45 container mx-auto z-20 ">
         <div className="max-w-6xl mx-auto px-4">
-          {/* Main Container */}
+          
           <div className="bg-white rounded-2xl shadow-md p-6 grid grid-cols-1 md:grid-cols-4 gap-6">
-            {/* Item 1 */}
+     
             <div className="flex items-start gap-4 ">
               <div className="bg-blue-100 p-3 rounded-full">
                 <FaUsers className="text-blue-500 text-lg" />
@@ -168,7 +168,6 @@ const Banner = () => {
               </div>
             </div>
 
-            {/* Item 2 */}
             <div className="flex items-start gap-4 md:border-l md:pl-6">
               <div className="bg-green-100 p-3 rounded-full">
                 <FaRocket className="text-green-500 text-lg" />
@@ -183,7 +182,6 @@ const Banner = () => {
               </div>
             </div>
 
-            {/* Item 3 */}
             <div className="flex items-start gap-4 md:border-l md:pl-6">
               <div className="bg-yellow-100 p-3 rounded-full">
                 <FaAward className="text-yellow-500 text-lg" />
@@ -198,7 +196,7 @@ const Banner = () => {
               </div>
             </div>
 
-            {/* Item 4 */}
+
             <div className="flex items-start gap-4 md:border-l md:pl-6">
               <div className="bg-purple-100 p-3 rounded-full">
                 <FaSmile className="text-purple-500 text-lg" />
