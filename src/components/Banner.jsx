@@ -63,7 +63,7 @@ const Banner = () => {
                     <FaBookOpen className="text-green-500 text-lg" />
                   </div>
                   <div>
-                    <h2 className="text-lg font-bold text-gray-800">5+</h2>
+                    <h2 className="text-lg font-bold text-gray-800">7+</h2>
                     <p className="text-sm text-gray-500">Expert Courses</p>
                   </div>
                 </div>
