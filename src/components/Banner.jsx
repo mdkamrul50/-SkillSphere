@@ -20,14 +20,16 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 
 const Banner = () => {
   return (
-    <div className='bg-blue-100'>
-      <div className="container mx-auto pl-6  flex ">
-        <div className="pt-10">
-          <span className=" font-semibold text-blue-500 flex items-center gap-3 bg-blue-200 px-3 py-1 rounded-full max-w-60 mb-8">
+    <div className="bg-blue-100">
+      <div className="container mx-auto pl-6  flex  lg:flex-row md:flex-col-reverse flex-col-reverse ">
+        <div className="pt-10 text-center md:text-left ">
+          <span className=" font-semibold text-blue-500 flex items-center gap-3 bg-blue-200 px-3 py-1 rounded-full max-w-60 mb-8 ">
             <FaGraduationCap /> Online Learning Platform
           </span>
-          <h2 className="text-6xl font-bold pb-3">Upgrade Your Skills. </h2>
-          <h2 className="text-6xl font-bold ">
+          <h2 className="md:text-6xl text-5xl font-bold pb-3">
+            Upgrade Your Skills.{' '}
+          </h2>
+          <h2 className="md:text-6xl text-5xl font-bold ">
             Advance Your <span className="text-blue-500">Future.</span>{' '}
           </h2>
           <p className=" font-semibold text-gray-500 mt-5">
@@ -94,20 +96,20 @@ const Banner = () => {
         <div className="">
           <section className="relative  py-10 overflow-hidden ml-10">
             <div className="max-w-6xl mx-auto px-4 flex justify-center items-center relative">
-              <div className="absolute w-102.5 h-112.5 bg-blue-500 rounded-full opacity-70 blur-2xl"></div>
+             
+              <div className="absolute w-64 md:flex hidden h-64 md:w-80 md:h-80 lg:w-102.5 lg:h-112.5 bg-blue-500 rounded-full opacity-70 blur-2xl"></div>
 
               
-              <div className="relative z-10">
+              <div className="relative z-10 md:flex hidden justify-center">
                 <Image
                   src={BannerImage}
                   alt="student"
                   width={550}
                   height={550}
-                  className="object-contain"
+                  className="object-contain "
                 />
               </div>
 
-          
               <div className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-xl p-4 items-center gap-3 z-20">
                 <div className="bg-green-100 p-3 rounded-full">
                   <FaChartBar className="text-green-500" />
@@ -120,7 +122,6 @@ const Banner = () => {
                 </div>
               </div>
 
-           
               <div className="hidden md:flex absolute right-0 top-10 bg-white shadow-md rounded-xl p-4 items-center gap-3 z-20">
                 <div className="bg-blue-100 p-3 rounded-full">
                   <FaPlay className="text-blue-500" />
@@ -133,7 +134,6 @@ const Banner = () => {
                 </div>
               </div>
 
-              
               <div className="hidden md:flex absolute right-0 bottom-10 bg-white shadow-md rounded-xl p-4 items-center gap-3 z-20">
                 <div className="bg-yellow-100 p-3 rounded-full">
                   <FaFileAlt className="text-yellow-500" />
@@ -149,11 +149,9 @@ const Banner = () => {
           </section>
         </div>
       </div>
-      <section className=" absolute bottom-45 left-45 container mx-auto z-20 ">
+      <section className="relative lg:absolute lg:bottom-45 lg:left-45 container mx-auto z-20 mt-10 lg:mt-0">
         <div className="max-w-6xl mx-auto px-4">
-          
           <div className="bg-white rounded-2xl shadow-md p-6 grid grid-cols-1 md:grid-cols-4 gap-6">
-     
             <div className="flex items-start gap-4 ">
               <div className="bg-blue-100 p-3 rounded-full">
                 <FaUsers className="text-blue-500 text-lg" />
@@ -195,7 +193,6 @@ const Banner = () => {
                 </p>
               </div>
             </div>
-
 
             <div className="flex items-start gap-4 md:border-l md:pl-6">
               <div className="bg-purple-100 p-3 rounded-full">
