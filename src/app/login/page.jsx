@@ -26,10 +26,17 @@ const loginPage = () => {
       email,
 
       password,
-      callbackURL:'/'
+      callbackURL: '/',
     });
     console.log(data, error);
   };
+
+  const handelGoogleLogin = async () => {
+    await authClient.signIn.social({
+      provider:"google"
+    })
+  };
+
   return (
     <div className="flex justify-center py-40 bg-blue-200">
       <Form
@@ -80,6 +87,24 @@ const loginPage = () => {
           <Button className={'w-full'} type="submit">
             <Check />
             Login
+          </Button>
+
+          <div className="flex items-center gap-2 my-2">
+            <div className="flex-1 h-px bg-gray-300"></div>
+            <span className="text-xs text-gray-500">OR</span>
+            <div className="flex-1 h-px bg-gray-300"></div>
+          </div>
+
+          <Button
+            onClick={handelGoogleLogin}
+            className="w-full bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 transition flex items-center justify-center gap-2"
+          >
+            <img
+              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              alt="google"
+              className="w-5 h-5"
+            />
+            Continue with Google
           </Button>
         </div>
         <p className="text-center text-sm text-gray-600 mt-2">

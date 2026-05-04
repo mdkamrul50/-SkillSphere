@@ -13,8 +13,11 @@ import {
   TextField,
 } from '@heroui/react';
 import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
 
 const registerPage = () => {
+
+  const router = useRouter()
 
   const onSubmit = async(e)=>{
     e.preventDefault()
@@ -31,6 +34,9 @@ const registerPage = () => {
       password,
     })
     console.log(data,error);
+    if(!error){
+       router.push('/')
+    }
   }
   return (
     <div className="flex justify-center py-40 bg-blue-200">
