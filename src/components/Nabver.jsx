@@ -5,15 +5,20 @@ import Logo from '@/assets/logo.jpg';
 import { Avatar, Button } from '@heroui/react';
 import Link from 'next/link';
 import { authClient } from '@/lib/auth-client';
+import { usePathname } from 'next/navigation';
 
 const Nabver = () => {
   const userInfo = authClient.useSession();
   const user = userInfo.data?.user;
   const [open, setOpen] = useState(false);
 
+  const pathname = usePathname();
+
   const handelSignOut = async () => {
     await authClient.signOut();
   };
+
+  const isActive = (path) => pathname === path;
 
   return (
     <div className="bg-gray-100">
@@ -28,13 +33,25 @@ const Nabver = () => {
 
         <ul className="hidden md:flex items-center gap-4 font-semibold text-gray-700">
           <Link href={'/'}>
-            <li>Home</li>
+            <li className={isActive('/') ? 'text-blue-500 font-bold' : ''}>
+              Home
+            </li>
           </Link>
+
           <Link href={'/course'}>
-            <li>Courses</li>
+            <li
+              className={isActive('/course') ? 'text-blue-500 font-bold' : ''}
+            >
+              Courses
+            </li>
           </Link>
+
           <Link href={'/profile'}>
-            <li>My Profile</li>
+            <li
+              className={isActive('/profile') ? 'text-blue-500 font-bold' : ''}
+            >
+              My Profile
+            </li>
           </Link>
         </ul>
 
@@ -58,7 +75,9 @@ const Nabver = () => {
                   src={user?.image}
                   referrerPolicy="no-referrer"
                 />
-                <Avatar.Fallback className='text-xl font-semibold'>{user?.name[0]}</Avatar.Fallback>
+                <Avatar.Fallback className="text-xl font-semibold">
+                  {user?.name[0]}
+                </Avatar.Fallback>
               </Avatar>
 
               <Button onClick={handelSignOut} variant="danger">
@@ -73,13 +92,27 @@ const Nabver = () => {
         <div className="md:hidden px-4 pb-4 space-y-3">
           <ul className="flex flex-col gap-3 font-semibold text-gray-700">
             <Link href={'/'} onClick={() => setOpen(false)}>
-              <li>Home</li>
+              <li className={isActive('/') ? 'text-blue-500 font-bold' : ''}>
+                Home
+              </li>
             </Link>
+
             <Link href={'/course'} onClick={() => setOpen(false)}>
-              <li>Courses</li>
+              <li
+                className={isActive('/course') ? 'text-blue-500 font-bold' : ''}
+              >
+                Courses
+              </li>
             </Link>
+
             <Link href={'/profile'} onClick={() => setOpen(false)}>
-              <li>My Profile</li>
+              <li
+                className={
+                  isActive('/profile') ? 'text-blue-500 font-bold' : ''
+                }
+              >
+                My Profile
+              </li>
             </Link>
           </ul>
 

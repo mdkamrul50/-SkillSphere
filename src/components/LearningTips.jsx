@@ -6,10 +6,10 @@ const LearningTips = () => {
     <div>
       <div className="py-16 bg-linear-to-b from-blue-50 via-white to-blue-200">
         <div className="max-w-6xl mx-auto px-4">
-          {/* Header */}
+         
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 flex justify-center gap-2">
-              <FcIdea /> Learning Tips Section
+              <FcIdea /> Learning Tips
             </h2>
             <p className="text-gray-500 mt-2">
               Boost your productivity with smart study habits

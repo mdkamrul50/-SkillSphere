@@ -21,7 +21,7 @@ const Footer = () => {
               <div className="bg-blue-500 text-white p-3 rounded-2xl">
                 <FaGraduationCap className="text-3xl" />
               </div>
-              <h2 className="text-3xl font-bold tracking-tight">SkillForge</h2>
+              <h2 className="text-3xl font-bold tracking-tight">SkillSphere</h2>
             </div>
 
             <p className="text-blue-200 text-[15px] leading-relaxed mb-6">
@@ -30,8 +30,8 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-2 text-blue-300">
-              <span>📍</span>
-              <span className="text-sm">Bhola, Barisal, Bangladesh</span>
+              
+              
             </div>
           </div>
 
@@ -145,16 +145,16 @@ const Footer = () => {
                   href="mailto:hello@skillforge.com"
                   className="text-blue-200 hover:text-white transition-all duration-200"
                 >
-                  hello@skillforge.com
+                  kamrul.dev.web@gmail.com
                 </a>
               </div>
               <div>
                 <p className="text-blue-400 text-sm mb-1">Phone</p>
                 <a
-                  href="tel:+8801712345678"
+                  href="tel:+88017772237629"
                   className="text-blue-200 hover:text-white transition-all duration-200"
                 >
-                  +880 1712-345678
+                  +880 17772237629
                 </a>
               </div>
             </div>
@@ -219,9 +219,7 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className="text-xs text-blue-400">
-              Made with ❤️ for lifelong learners
-            </div>
+            
           </div>
         </div>
       </div>
