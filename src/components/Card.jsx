@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
@@ -26,9 +27,11 @@ const Card = ({ course }) => {
         </div>
 
         <div className="mt-auto">
-          <button className="mt-5 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
-             View Details
-          </button>
+          <Link href={`/course/${course.id}`}>
+            <button className="mt-5 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>

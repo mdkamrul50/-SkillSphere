@@ -3,6 +3,7 @@ import "./globals.css";
 import Nabver from "@/components/Nabver";
 import Footer from "@/components/Footer";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,10 +27,10 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Nabver />
+      
         {children}
         <Footer></Footer>
-        
-        </body>
+      </body>
     </html>
   );
 }

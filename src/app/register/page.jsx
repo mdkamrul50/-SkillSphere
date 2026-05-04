@@ -15,6 +15,9 @@ import {
 import { authClient } from '@/lib/auth-client';
 import { useRouter } from 'next/navigation';
 
+// import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const registerPage = () => {
 
   const router = useRouter()
@@ -26,15 +29,20 @@ const registerPage = () => {
     const email = e.target.email.value
     const password = e.target.password.value
     const url = e.target.url.value;
-    // console.log(name,email,password,url);
+   
     const {data,error} = await authClient.signUp.email({
       name,
       email,
       url,
       password,
     })
-    console.log(data,error);
+
+        if (error) {
+          toast.error('Registration failed ❌ ' + error.message);
+        }
+
     if(!error){
+       toast.success('Account created successfully 🎉');
        router.push('/')
     }
   }

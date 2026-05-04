@@ -15,6 +15,10 @@ import {
 import Link from 'next/link';
 import { authClient } from '@/lib/auth-client';
 
+
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const loginPage = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -24,21 +28,39 @@ const loginPage = () => {
 
     const { data, error } = await authClient.signIn.email({
       email,
-
       password,
       callbackURL: '/',
     });
+
+  
+    if (error) {
+      toast.error('Login failed ❌ ' + error.message);
+    }
+
+    if (data) {
+      toast.success('Login successful 🎉');
+    }
+
     console.log(data, error);
   };
 
   const handelGoogleLogin = async () => {
-    await authClient.signIn.social({
-      provider:"google"
-    })
+    try {
+      await authClient.signIn.social({
+        provider: 'google',
+      });
+
+      toast.success('Redirecting to Google... 🚀');
+    } catch (error) {
+      toast.error('Google login failed ❌');
+    }
   };
 
   return (
     <div className="flex justify-center py-40 bg-blue-200">
+      
+      <ToastContainer position="top-right" autoClose={3000} />
+
       <Form
         onSubmit={onSubmit}
         className="flex w-96 flex-col gap-4 shadow-xl rounded-2xl px-8 py-20 bg-linear-to-br from-blue-100 via-blue-300 to-blue-50"
@@ -58,6 +80,7 @@ const loginPage = () => {
           <Input className={'bg-blue-100'} placeholder="Enter your email" />
           <FieldError />
         </TextField>
+
         <TextField
           isRequired
           minLength={8}
@@ -83,6 +106,7 @@ const loginPage = () => {
           </Description>
           <FieldError />
         </TextField>
+
         <div className="">
           <Button className={'w-full'} type="submit">
             <Check />
@@ -107,6 +131,7 @@ const loginPage = () => {
             Continue with Google
           </Button>
         </div>
+
         <p className="text-center text-sm text-gray-600 mt-2">
           Don’t have an account?{' '}
           <Link

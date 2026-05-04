@@ -3,10 +3,12 @@ import LearningTips from '@/components/LearningTips';
 import TopCourse from '@/components/TopCourse';
 import TopInstructors from '@/components/TopInstructors';
 import Image from 'next/image';
+import { ToastContainer } from 'react-toastify';
 
 export default function Home() {
   return (
     <div>
+      <ToastContainer />
       <Banner></Banner>
       <TopCourse></TopCourse>
       <LearningTips></LearningTips>

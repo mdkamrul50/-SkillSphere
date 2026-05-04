@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="bg-blue-950 text-white pt-20 pb-12">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand Section */}
+   
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="bg-blue-500 text-white p-3 rounded-2xl">
@@ -35,7 +35,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-blue-100">
               Quick Links
@@ -84,7 +83,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company */}
+ 
           <div>
             <h3 className="text-lg font-semibold mb-6 text-blue-100">
               Company
@@ -133,7 +132,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact & Social */}
+        
           <div>
             <h3 className="text-lg font-semibold mb-6 text-blue-100">
               Get In Touch
@@ -160,7 +159,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Social Media */}
             <div>
               <p className="text-blue-400 text-sm mb-4">Follow Us</p>
               <div className="flex gap-4">
@@ -204,7 +202,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
+
         <div className="border-t border-blue-800 mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-blue-300">
             <div>© 2026 SkillForge. All Rights Reserved.</div>

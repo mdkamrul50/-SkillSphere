@@ -17,13 +17,13 @@ const ProfilePage = () => {
     );
   }
 
-  if (!user) {
-    return (
-      <div className="flex justify-center items-center h-screen text-red-500">
-        You are not logged in <BiError />
-      </div>
-    );
-  }
+  // if (!user) {
+  //   return (
+  //     <div className="flex justify-center items-center h-screen text-red-500">
+  //       You are not logged in <BiError />
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="min-h-screen bg-linear-to-br from-blue-50 via-blue-300 to-blue-50 flex justify-center items-center px-4">
