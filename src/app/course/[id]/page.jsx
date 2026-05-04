@@ -8,6 +8,7 @@ import { FaStar, FaUserAlt, FaClock, FaPlayCircle } from 'react-icons/fa';
 import { MdOutlineAttachMoney } from 'react-icons/md';
 import { BiBookOpen } from 'react-icons/bi';
 import { HiSparkles } from 'react-icons/hi';
+import { Spinner } from '@heroui/react';
 
 const CourseDetails = () => {
   const { id } = useParams();
@@ -28,7 +29,10 @@ const CourseDetails = () => {
   if (!course) {
     return (
       <div className="min-h-screen flex justify-center items-center bg-linear-to-br from-blue-200 via-blue-100 to-blue-300 text-blue-700 text-xl font-semibold">
-        Loading...
+        <div className="flex flex-col items-center gap-2">
+          <Spinner size="xl" />
+          
+        </div>
       </div>
     );
   }

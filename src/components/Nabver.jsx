@@ -58,7 +58,7 @@ const Nabver = () => {
                   src={user?.image}
                   referrerPolicy="no-referrer"
                 />
-                <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+                <Avatar.Fallback className='text-xl font-semibold'>{user?.name[0]}</Avatar.Fallback>
               </Avatar>
 
               <Button onClick={handelSignOut} variant="danger">

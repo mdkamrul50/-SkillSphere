@@ -2,6 +2,7 @@
 
 import { UpdateProfile } from '@/components/UpdateProfile';
 import { authClient } from '@/lib/auth-client';
+import { Spinner } from '@heroui/react';
 import React from 'react';
 import { BiEdit, BiError } from 'react-icons/bi';
 
@@ -12,18 +13,15 @@ const ProfilePage = () => {
   if (isPending) {
     return (
       <div className="flex justify-center items-center h-screen text-lg">
-        Loading...
+        <div className="flex flex-col items-center gap-2">
+          <Spinner size="xl" />
+          
+        </div>
       </div>
     );
   }
 
-  // if (!user) {
-  //   return (
-  //     <div className="flex justify-center items-center h-screen text-red-500">
-  //       You are not logged in <BiError />
-  //     </div>
-  //   );
-  // }
+
 
   return (
     <div className="min-h-screen bg-linear-to-br from-blue-50 via-blue-300 to-blue-50 flex justify-center items-center px-4">

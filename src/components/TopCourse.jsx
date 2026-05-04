@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 
 import Card from './Card';
+import { Spinner } from '@heroui/react';
 
 export default function TopCourses() {
   const [courses, setCourses] = useState([]);
@@ -42,7 +43,10 @@ export default function TopCourses() {
         </div>
 
         {loading ? (
-          <p className="text-center text-gray-500">Loading courses...</p>
+          <div className="flex flex-col items-center gap-2">
+            <Spinner size="xl" />
+            
+          </div>
         ) : (
           <div className="grid md:grid-cols-3 gap-8">
             {courses.map((course) => {
