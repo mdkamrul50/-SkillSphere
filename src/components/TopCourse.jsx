@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 import Card from './Card';
 import { Spinner } from '@heroui/react';
+import AnimatedCard from './AnimatedCard';
 
 export default function TopCourses() {
   const [courses, setCourses] = useState([]);
@@ -31,30 +32,31 @@ export default function TopCourses() {
   }, []);
 
   return (
-    <section className="py-25 bg-linear-to-b from-blue-200 via-white to-blue-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-            Our Popular Courses
-          </h2>
-          <p className="text-gray-500 mt-2">
-            Discover our highest rated courses by students
-          </p>
-        </div>
+    <AnimatedCard>
+      <section className="py-25 bg-linear-to-b from-blue-200 via-white to-blue-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+              Our Popular Courses
+            </h2>
+            <p className="text-gray-500 mt-2">
+              Discover our highest rated courses by students
+            </p>
+          </div>
 
-        {loading ? (
-          <div className="flex flex-col items-center gap-2">
-            <Spinner size="xl" />
-            
-          </div>
-        ) : (
-          <div className="grid md:grid-cols-3 gap-8">
-            {courses.map((course) => {
-              return <Card course={course} key={course.id}></Card>;
-            })}
-          </div>
-        )}
-      </div>
-    </section>
+          {loading ? (
+            <div className="flex flex-col items-center gap-2">
+              <Spinner size="xl" />
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-3 gap-8">
+              {courses.map((course) => {
+                return <Card course={course} key={course.id}></Card>;
+              })}
+            </div>
+          )}
+        </div>
+      </section>
+    </AnimatedCard>
   );
 }
