@@ -20,10 +20,7 @@ export function UpdateProfile() {
     const name = e.target.name.value;
     const image = e.target.image.value;
 
-    console.log({
-      name,
-      url
-    });
+
 
     await authClient.updateUser({
       name,
